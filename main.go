@@ -38,7 +38,7 @@ type neuralNetConfig struct {
 func main() {
 
 	// Form the training matrices.
-	inputs, labels := makeInputsAndLabels("train.csv")
+	inputs, labels := makeInputsAndLabels("data/train.csv")
 
 	// Define our network architecture and learning parameters.
 	config := neuralNetConfig{
@@ -56,7 +56,7 @@ func main() {
 	}
 
 	// Form the testing matrices.
-	testInputs, testLabels := makeInputsAndLabels("test.csv")
+	testInputs, testLabels := makeInputsAndLabels("data/test.csv")
 
 	// Make the predictions using the trained model.
 	predictions, err := network.predict(testInputs)
